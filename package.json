@@ -2,10 +2,11 @@
   "name": "well-named-in",
   "version": "1.0.0",
   "description": "JS Assignment Repository",
-  "main": "colorCoder.js",
+  "main": "colorFunctions.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app/colorCoder.js"
+    "test": "node tests/colorFunctions.test.js",
+    "start": "node app/colorFunctions.js"
   },
   "repository": {
     "type": "git",

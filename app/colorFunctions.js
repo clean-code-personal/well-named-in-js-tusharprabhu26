@@ -1,5 +1,4 @@
 import ColorPair from "./colorPair.js";
-
 import ColorNames from "./colorNames.js";
 
 function getColorFromPairNumber(pairNumber) {
@@ -42,4 +41,23 @@ function getPairNumberFromColor(pair) {
   return majorIndex * ColorNames.MinorColorNames.length + (minorIndex + 1);
 }
 
-export default { getColorFromPairNumber, getPairNumberFromColor };
+function getColorReferenceManual() {
+  let colorPairManual = [];
+  let pairNumber = 1;
+  for (let majorColor of ColorNames.MajorColorNames) {
+    for (let minorColor of ColorNames.MinorColorNames) {
+      colorPairManual.push({
+        pairNumber: pairNumber++,
+        majorColor: majorColor,
+        minorColor: minorColor,
+      });
+    }
+  }
+  return colorPairManual;
+}
+
+export default {
+  getColorFromPairNumber,
+  getPairNumberFromColor,
+  getColorReferenceManual,
+};

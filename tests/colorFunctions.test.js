@@ -33,5 +33,20 @@ function test() {
   pairNumber = ColorFunctions.getPairNumberFromColor(testPair2);
   console.log(`[In]Colors: ${testPair2}, [Out] PairNumber: ${pairNumber}`);
   console.assert(pairNumber == 6);
+
+  const colorPairManual = ColorFunctions.getColorReferenceManual();
+  for (const colorPairFromManual of colorPairManual) {
+    let pairNumber = colorPairFromManual.pairNumber;
+    let testColor = ColorFunctions.getColorFromPairNumber(pairNumber);
+    console.assert(
+      testColor.majorColor === colorPairFromManual.majorColor,
+      `Expected major color: ${colorPairFromManual.majorColor}, but got ${testColor.majorColor}`
+    );
+    console.assert(
+      testColor.minorColor === colorPairFromManual.minorColor,
+      `Expected minor color: ${colorPairFromManual.minorColor}, but got ${testColor.minorColor}`
+    );
+    console.log(colorPairFromManual);
+  }
 }
 test();

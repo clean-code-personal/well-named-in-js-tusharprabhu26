@@ -5,7 +5,8 @@
   "main": "colorFunctions.js",
   "type": "module",
   "scripts": {
-    "test": "node tests/colorFunctions.test.js"
+    "test": "node tests/colorFunctions.test.js",
+    "start": "node tests/colorFunctions.test.js"
   },
   "repository": {
     "type": "git",

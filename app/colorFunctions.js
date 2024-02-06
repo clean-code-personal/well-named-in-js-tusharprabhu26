@@ -36,7 +36,7 @@ function getPairNumberFromColor(pair) {
   return majorIndex * ColorNames.MinorColorNames.length + (minorIndex + 1);
 }
 function getColorReferenceManual() {
-  let colorPairManual = ["-".repeat(43) + "\n| Pair Number | Major Color | Minor Color |\n" + "-".repeat(43)];
+  let colorPairManual = ["\n|" + " ".repeat(6) + "Color Coding Reference Manual"+ " ".repeat(6) + "|\n" + "-".repeat(43) + "\n| Pair Number | Major Color | Minor Color |\n" + "-".repeat(43)];
   let pairNumber = 1;
   for (let majorColor of ColorNames.MajorColorNames) {
     for (let minorColor of ColorNames.MinorColorNames) {

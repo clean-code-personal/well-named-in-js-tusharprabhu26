@@ -36,11 +36,12 @@ function getPairNumberFromColor(pair) {
   return majorIndex * ColorNames.MinorColorNames.length + (minorIndex + 1);
 }
 function getColorReferenceManual() {
-  let colorPairManual = [];
+  let colorPairManual = ["-".repeat(43) + "\n| Pair Number | Major Color | Minor Color |\n" + "-".repeat(43)];
   let pairNumber = 1;
   for (let majorColor of ColorNames.MajorColorNames) {
     for (let minorColor of ColorNames.MinorColorNames) {
-      colorPairManual.push({ pairNumber: pairNumber++, majorColor: majorColor, minorColor: minorColor });
+      colorPairManual.push(`| ${pairNumber.toString().padEnd(11)} | ${majorColor.padEnd(11)} | ${minorColor.padEnd(11)} |`);
+      pairNumber++;
     }
   }
   return colorPairManual;

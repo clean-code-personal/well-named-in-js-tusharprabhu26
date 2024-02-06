@@ -40,7 +40,7 @@ function test() {
     let pairNumber = colorPairFromManual.pairNumber;
     let testColor = ColorFunctions.getColorFromPairNumber(pairNumber);
     console.assert(testColor.majorColor === colorPairFromManual.majorColor, `Expected major color: ${testColor.majorColor}, but got ${colorPairFromManual.majorColor}`);
-    console.assert(testColor.minorColor === colorPairFromManual.minorColor, `Expected minor color: ${colorPairFromManual.minorColor}, but got ${testColor.minorColor}`);
+    console.assert(testColor.minorColor === colorPairFromManual.minorColor, `Expected minor color: ${testColor.minorColor}, but got ${colorPairFromManual.minorColor}`);
     console.log(colorPairFromManual);
   }
 }

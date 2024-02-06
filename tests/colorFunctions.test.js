@@ -35,7 +35,7 @@ function test() {
   console.assert(pairNumber == 6);
 
   const colorPairManual = ColorFunctions.getColorReferenceManual();
-  console.assert(colorPairManual[0] === "-".repeat(43) + "\n| Pair Number | Major Color | Minor Color |\n" + "-".repeat(43), "Expected heading not found in the reference manual");
+  console.assert(colorPairManual[0] === "\n|" + " ".repeat(6) + "Color Coding Reference Manual"+ " ".repeat(6) + "|\n" + "-".repeat(43) + "\n| Pair Number | Major Color | Minor Color |\n" + "-".repeat(43), "Expected heading not found in the reference manual");
   for (const colorPairFromManual of colorPairManual) {
     let pairNumber = colorPairFromManual.pairNumber;
     let testColor = ColorFunctions.getColorFromPairNumber(pairNumber);
